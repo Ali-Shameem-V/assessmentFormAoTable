@@ -110,7 +110,7 @@ namespace assessmentFormAoTable.Controllers
                     var form = await demoContext.Forms.Where(_ => _.Id == id).ToListAsync();
                     return Ok(form);
                 }
-                return BadRequest("Id not Found");
+                return BadRequest("No Form Records for the Id "+id);
             }
             catch (Exception ex) 
             {
@@ -156,10 +156,10 @@ namespace assessmentFormAoTable.Controllers
                 {
                     var re = new
                     {
-                        form = result,
+                        result,
                         tablename = res.Name
                     };
-                    return Ok(result);
+                    return Ok(re);
                 }
                 return BadRequest("No Table Id found for Form Table");
             }

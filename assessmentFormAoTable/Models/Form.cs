@@ -6,9 +6,7 @@ namespace assessmentFormAoTable.Models;
 
 public partial class Form
 {
-
     public Guid Id { get; set; }
-
     public Guid? RatebookId { get; set; }
 
     public Guid? TableId { get; set; }

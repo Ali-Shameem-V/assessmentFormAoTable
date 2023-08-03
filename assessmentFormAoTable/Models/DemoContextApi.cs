@@ -6,6 +6,8 @@ namespace assessmentFormAoTable.Models;
 
 public partial class DemoContextApi : DbContext
 {
+    internal object AoTableDto;
+
     public DemoContextApi()
     {
     }
